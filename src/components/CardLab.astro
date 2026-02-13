@@ -1,0 +1,18 @@
+---
+// src/components/CardLab.astro
+
+interface Props {
+    link: string;
+    icono: string;
+    titulo: string;
+    descripcion: string;
+}
+
+const { link, icono, titulo, descripcion } = Astro.props;
+---
+
+<a href={link} target="_blank" class="lab-card">
+    <span class="lab-icon">{icono}</span>
+    <h4>{titulo}</h4>
+    <p>{descripcion}</p>
+</a>
