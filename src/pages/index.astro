@@ -1,28 +1,230 @@
 ---
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Perfil | Rafa San Pablo">
-    <section class="hero" id="about">
+<Layout title="Rafa San Pablo | Backend & Laravel Engineer">
+    
+    <section class="hero" id="home" style="padding-top: 15vh; min-height: 100vh;">
         <div class="container">
-            <div style="max-width: 800px;">
-                <p class="mono-font neon-text">> php artisan serve --port=2025</p>
-                <h1>Arquitectura limpia & alto rendimiento con <span class="laravel-text">Laravel</span>.</h1>
+            <div style="max-width: 900px;">
                 
-                <div class="hero-tags">
-                    <span class="hero-tag">PHP 8.2+</span>
-                    <span class="hero-tag">Livewire 3</span>
-                    <span class="hero-tag">AWS S3</span>
-                    <span class="hero-tag">TDD/PestPHP</span>
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> Construyendo RapidGest SaaS
                 </div>
 
-                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px;">
-                    Soy Rafa San Pablo. Desarrollo soluciones web empresariales escalables priorizando la calidad del código y la experiencia de usuario.
-                    Especialista en el Stack TALL y metodologías ágiles.
+                <h1 style="font-size: clamp(3.5rem, 6vw, 5.5rem); line-height: 1.05; margin-bottom: 25px; margin-top: 30px; letter-spacing: -2px;">
+                    Ingeniería Backend.<br/>
+                    <span style="color: #444;">Arquitectura limpia.</span>
+                </h1>
+                
+                <p style="font-size: 1.2rem; color: #888; margin-bottom: 45px; max-width: 650px; line-height: 1.6;">
+                    Especializado en el ecosistema <span style="color: #e0e0e0;">PHP / Laravel</span>. 
+                    Diseño APIs RESTful robustas, automatizo procesos y construyo bases sólidas para aplicaciones escalables.
                 </p>
-                <a href="/proyectos" class="btn">Ver RapidGest & Más</a>
-                <a href="https://www.linkedin.com/in/rafaspg" target="_blank" style="margin-left: 20px; color: #fff; border-bottom: 1px solid #fff;">LinkedIn Profile ↗</a>
+
+                <div style="display: flex; gap: 25px; align-items: center; margin-bottom: 90px; flex-wrap: wrap;">
+                    <a href="/proyectos" class="btn">Ver Proyectos</a>
+                    <a href="https://github.com/R4F405" target="_blank" class="text-link">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/rafaspg" target="_blank" class="text-link">LinkedIn ↗</a>
+                </div>
+
+                <div class="core-grid">
+                    <div class="core-card">
+                        <span class="mono-font neon-text">01.</span>
+                        <h3>Desarrollo Core</h3>
+                        <p>Lógica de negocio compleja, optimización de consultas SQL y cultura TDD (PestPHP).</p>
+                    </div>
+                    <div class="core-card">
+                        <span class="mono-font laravel-text">02.</span>
+                        <h3>Stack TALL</h3>
+                        <p>Desarrollo full-stack reactivo con Tailwind, Alpine.js, Laravel y Livewire 3.</p>
+                    </div>
+                    <div class="core-card">
+                        <span class="mono-font" style="color: #7000ff;">03.</span>
+                        <h3>Infraestructura</h3>
+                        <p>Despliegues con Docker/Sail, CI/CD, gestión de AWS S3 y Webhooks.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <section id="mindset" style="padding-bottom: 120px;">
+        <div class="container">
+            <h2 class="section-title">Mi forma <span style="color: #444;">de trabajar</span></h2>
+            
+            <div class="mindset-cards-container">
+                
+                <article class="mindset-card" style="--card-neon: var(--neon-primary);">
+                    <div class="glow-line"></div>
+                    <h3>Curiosidad por defecto</h3>
+                    <p>
+                        Aunque mi día a día está en el backend con PHP y Laravel, mi verdadera motivación es aprender cómo funciona la máquina por debajo. Empecé peleándome con Java y Kotlin para Android, y hoy me divierto armando scripts en Python o experimentando con motores gráficos. No me caso con una sola herramienta; pruebo de todo por pura diversión.
+                    </p>
+                </article>
+
+                <article class="mindset-card" style="--card-neon: var(--neon-accent);">
+                    <div class="glow-line"></div>
+                    <h3>Tolerancia cero al desorden</h3>
+                    <p>
+                        Si hay algo que odio encontrarme al leer código (ya sea mío o de otro) es ver componentes duplicados, responsabilidades mezcladas o el clásico comentario de <code style="color:var(--neon-accent);">// TODO: esto no funciona</code>. Creo que si vas a escribir algo, debes hacerlo pensando en el compañero que lo va a tener que mantener mañana. La documentación y la estructura no son opcionales.
+                    </p>
+                </article>
+
+                <article class="mindset-card" style="--card-neon: var(--neon-secondary);">
+                    <div class="glow-line"></div>
+                    <h3>Mi proceso de debugging</h3>
+                    <p>
+                        Cuando algo explota o me atasco con un bug raro, mi primer paso es innegociable: me levanto y me hago un café. Esos 5 minutos de desconexión son vitales. Al volver, aíslo el problema trazando dónde empezó a fallar y monto un árbol de posibles causas. Si el reto es muy complejo, uso la IA para rebotar ideas antes de tirar líneas de código a lo loco.
+                    </p>
+                </article>
+
+                <article class="mindset-card" style="--card-neon: #00d8ff;">
+                    <div class="glow-line"></div>
+                    <h3>Traductor entre código y cliente</h3>
+                    <p>
+                        Llevo un año formalmente en la industria, pero ya me toca dar la cara frente a los clientes y es algo que disfruto. Al haber tocado un poco de todo (frontend, backend, sistemas), me resulta fácil traducir lo que el cliente pide al idioma de los desarrolladores, y viceversa. Al final, todo este código que escribimos tiene que servir para solucionarle la vida a alguien.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
 </Layout>
+
+<style>
+    /* --- Status Badge --- */
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 50px;
+        font-size: 0.85rem;
+        color: #aaa;
+        font-family: 'Fira Code', monospace;
+        backdrop-filter: blur(10px);
+    }
+    
+    .pulse-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--neon-primary);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--neon-primary);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+    }
+
+    /* --- Enlaces simples --- */
+    .text-link {
+        color: #777;
+        font-size: 0.95rem;
+        font-family: 'Fira Code', monospace;
+        letter-spacing: -0.5px;
+    }
+    .text-link:hover { color: #fff; }
+
+    /* --- Bento Grid (Pilares) --- */
+    .core-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 50px;
+    }
+
+    .core-card {
+        padding: 25px;
+        background: rgba(255,255,255,0.01);
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.03);
+        transition: all 0.3s ease;
+    }
+
+    .core-card:hover {
+        background: rgba(255,255,255,0.03);
+        border-color: rgba(255,255,255,0.1);
+        transform: translateY(-5px);
+    }
+
+    .core-card span { display: block; margin-bottom: 15px; font-size: 1.1rem; }
+    .core-card h3 { font-size: 1.1rem; margin-bottom: 10px; color: #ddd; font-weight: 600; letter-spacing: -0.5px; }
+    .core-card p { font-size: 0.9rem; color: #777; line-height: 1.6; }
+
+    /* --- Mindset Cards (Nuevo Diseño Neón) --- */
+    .mindset-cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .mindset-cards-container { grid-template-columns: 1fr; }
+    }
+
+    .mindset-card {
+        position: relative;
+        padding: 35px 40px;
+        background: rgba(255, 255, 255, 0.015);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .mindset-card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        transform: translateY(-3px);
+    }
+
+    /* La línea vertical brillante a la izquierda */
+    .glow-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--card-neon);
+        box-shadow: 0 0 15px var(--card-neon);
+    }
+
+    /* El título con el puntito brillante en lugar del emoji */
+    .mindset-card h3 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 1.25rem;
+        color: #eee;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+    }
+
+    .mindset-card h3::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--card-neon);
+        box-shadow: 0 0 10px var(--card-neon);
+    }
+
+    .mindset-card p {
+        color: #888;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+</style>
