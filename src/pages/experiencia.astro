@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ItemExperiencia from '../components/ItemExperiencia.astro';
+---
+
+<Layout title="Trayectoria | Rafa San Pablo">
+    <section id="experience" style="padding-top: 150px; min-height: 100vh;">
+        <div class="container">
+            <h2 class="section-title">Experiencia & Formación</h2>
+            <div class="timeline">
+                
+                <ItemExperiencia 
+                    fecha="2025 - Actualidad"
+                    rol="Desarrollador de Software"
+                    empresa="Softtalia"
+                    ubicacion="Gandia, España"
+                    actual={true}
+                >
+                    Desarrollo integral de la plataforma <strong>RapidGest</strong>. Implementación de cultura TDD con PestPHP, gestión de infraestructura Docker/Sail y optimización de consultas SQL. Trabajo bajo metodologías ágiles (Scrum/Kanban) entregando valor constante.
+                </ItemExperiencia>
+
+                <ItemExperiencia 
+                    fecha="2023 - 2025"
+                    rol="Desarrollo de Aplicaciones Multiplataforma (DAM)"
+                    empresa="Florida Campus Alzira"
+                >
+                    Ciclo Formativo de Grado Superior. Especialización en desarrollo backend y arquitectura de software.
+                </ItemExperiencia>
+
+                <ItemExperiencia 
+                    fecha="2021 - 2023"
+                    rol="Técnico en Sistemas Microinformáticos y Redes"
+                    empresa="Academia Almi"
+                >
+                    Base sólida en administración de sistemas, redes y hardware.
+                </ItemExperiencia>
+
+            </div>
+        </div>
+    </section>
+</Layout>

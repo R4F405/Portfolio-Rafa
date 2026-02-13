@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardProyecto from '../components/CardProyecto.astro';
+---
+
+<Layout title="Proyectos | Rafa San Pablo">
+    <section id="projects" style="padding-top: 150px; min-height: 100vh;">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                
+                <CardProyecto 
+                    titulo="RapidGest SaaS"
+                    descripcion="Plataforma integral de gestión empresarial que transforma operaciones diarias. Desarrollo de APIs RESTful robustas y frontend reactivo."
+                    caracteristicas={[
+                        "Autenticación multi-proveedor (Jetstream)",
+                        "Gestión documental Cloud (AWS S3)",
+                        "Testing automatizado riguroso (PestPHP)"
+                    ]}
+                    tags={["Laravel 11", "Livewire 3", "Redis", "Docker"]}
+                    destacado={true} 
+                />
+
+                <CardProyecto 
+                    titulo="API Core Architecture"
+                    descripcion="Base arquitectónica para microservicios escalables. Implementación de patrones de diseño Clean Code y documentación automática."
+                    caracteristicas={[
+                        "Recursos API optimizados",
+                        "Integración Swagger/OpenAPI",
+                        "Seguridad con Laravel Sanctum"
+                    ]}
+                    tags={["PHP 8.2", "MySQL", "Postman"]}
+                />
+
+                <CardProyecto 
+                    titulo="Mini Task Manager"
+                    descripcion="Gestor de tareas SPA (Single Page Application) robusto y reactivo. Gestión de estados en tiempo real sin recargas de página."
+                    caracteristicas={[
+                        "Stack TALL (Tailwind, Alpine, Laravel, Livewire)",
+                        "Exportación a PDF (DomPDF) y Modo Oscuro",
+                        "Tests Automatizados (PestPHP)"
+                    ]}
+                    tags={["Laravel 12", "Livewire 3", "Alpine.js", "Tailwind"]}
+                />
+
+            </div>
+        </div>
+    </section>
+</Layout>
