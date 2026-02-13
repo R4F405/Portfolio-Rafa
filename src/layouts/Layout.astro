@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">RAFA<span class="neon-text">.DEV</span></a>
+                <div class="nav-links">
+                    <a href="#about">Perfil</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#experience">Trayectoria</a>
+                    <a href="#lab">Laboratorio</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <slot /> 
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="mono-font">Rafa San Pablo © 2026 | Gandia, España.</p>
+        </div>
+    </footer>
+
+    <script is:inline src="/script.js"></script>
+</body>
+</html>

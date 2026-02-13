@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CardProyecto from '../components/CardProyecto.astro';
+import ItemExperiencia from '../components/ItemExperiencia.astro';
+import CardLab from '../components/CardLab.astro';
+
+const experimentosLab = [
+    {
+        link: "https://github.com/R4F405/google-maps-scrap-automation",
+        icono: "📍",
+        titulo: "Maps Scraper",
+        descripcion: "Automatización de extracción de datos de Google Maps. Recolección de leads B2B y geolocalización de negocios."
+    },
+    {
+        link: "https://github.com/R4F405/instagram-follower-email-extractor",
+        icono: "🕵️",
+        titulo: "IG Lead Extractor",
+        descripcion: "Herramienta de minería de datos para Instagram. Automatización para obtener contactos públicos de seguidores."
+    },
+    {
+        link: "https://github.com/R4F405/bot-discord-github",
+        icono: "🐙",
+        titulo: "Git-Discord Sync",
+        descripcion: "Integración CI/CD. Webhooks para notificar push, pull requests e issues en canales específicos de desarrollo."
+    },
+    {
+        link: "https://github.com/R4F405/discord-jira-bot",
+        icono: "📋",
+        titulo: "Jira Agile Bot",
+        descripcion: "Puente entre gestión de proyectos y comunicación. Notificaciones de tickets y actualizaciones de sprints directamente en Discord."
+    },
+    {
+        link: "https://github.com/R4F405/bot-discord-youtube",
+        icono: "📺",
+        titulo: "YouTube Reproductor",
+        descripcion: "Reproduce video de YouTube. Reproduce musica desde tu servidor de discord con diversas funciones."
+    },
+    {
+        link: "https://github.com/R4F405/mnist-number-recognition-python",
+        icono: "🧠",
+        titulo: "MNIST Neural Net",
+        descripcion: "Red neuronal clásica para reconocimiento de dígitos manuscritos (0-9). Entrenamiento de modelos con Python y TensorFlow/Keras."
+    },
+    {
+        link: "https://github.com/R4F405/python-stable-diffusion-generator",
+        icono: "🎨",
+        titulo: "Stable Diffusion Gen",
+        descripcion: "Generador de imágenes por IA. Script en Python para interactuar con modelos de difusión estable y crear assets visuales."
+    },
+    {
+        link: "https://github.com/R4F405/flexbot-moderacion-discord",
+        icono: "🛡️",
+        titulo: "FlexBot Mod",
+        descripcion: "Bot de administración de servidores. Comandos de moderación, logs de auditoría y gestión automatizada de roles."
+    }
+];
+---
+<Layout title="Rafa San Pablo | Laravel Full Stack Developer">
+    
+    <section class="hero" id="about">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <p class="mono-font neon-text">> php artisan serve --port=2025</p>
+                <h1>Arquitectura limpia & alto rendimiento con <span class="laravel-text">Laravel</span>.</h1>
+                
+                <div class="hero-tags">
+                    <span class="hero-tag">PHP 8.2+</span>
+                    <span class="hero-tag">Livewire 3</span>
+                    <span class="hero-tag">AWS S3</span>
+                    <span class="hero-tag">TDD/PestPHP</span>
+                </div>
+
+                <p style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px;">
+                    Soy Rafa San Pablo. Desarrollo soluciones web empresariales escalables priorizando la calidad del código y la experiencia de usuario.
+                    Especialista en el Stack TALL y metodologías ágiles.
+                </p>
+                <a href="#projects" class="btn">Ver RapidGest & Más</a>
+                <a href="https://www.linkedin.com/in/rafaspg" target="_blank" style="margin-left: 20px; color: #fff; border-bottom: 1px solid #fff;">LinkedIn Profile ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                
+                <CardProyecto 
+                    titulo="RapidGest SaaS"
+                    descripcion="Plataforma integral de gestión empresarial que transforma operaciones diarias. Desarrollo de APIs RESTful robustas y frontend reactivo."
+                    caracteristicas={[
+                        "Autenticación multi-proveedor (Jetstream)",
+                        "Gestión documental Cloud (AWS S3)",
+                        "Testing automatizado riguroso (PestPHP)"
+                    ]}
+                    tags={["Laravel 11", "Livewire 3", "Redis", "Docker"]}
+                    destacado={true} 
+                />
+
+                <CardProyecto 
+                    titulo="API Core Architecture"
+                    descripcion="Base arquitectónica para microservicios escalables. Implementación de patrones de diseño Clean Code y documentación automática."
+                    caracteristicas={[
+                        "Recursos API optimizados",
+                        "Integración Swagger/OpenAPI",
+                        "Seguridad con Laravel Sanctum"
+                    ]}
+                    tags={["PHP 8.2", "MySQL", "Postman"]}
+                />
+
+                <CardProyecto 
+                    titulo="Mini Task Manager"
+                    descripcion="Gestor de tareas SPA (Single Page Application) robusto y reactivo. Gestión de estados en tiempo real sin recargas de página."
+                    caracteristicas={[
+                        "Stack TALL (Tailwind, Alpine, Laravel, Livewire)",
+                        "Exportación a PDF (DomPDF) y Modo Oscuro",
+                        "Tests Automatizados (PestPHP)"
+                    ]}
+                    tags={["Laravel 12", "Livewire 3", "Alpine.js", "Tailwind"]}
+                />
+
+            </div>
+        </div>
+    </section>
+
+	<section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia & Formación</h2>
+            <div class="timeline">
+                
+                <ItemExperiencia 
+                    fecha="2025 - Actualidad"
+                    rol="Desarrollador de Software"
+                    empresa="Softtalia"
+                    ubicacion="Gandia, España"
+                    actual={true}
+                >
+                    Desarrollo integral de la plataforma <strong>RapidGest</strong>. Implementación de cultura TDD con PestPHP, gestión de infraestructura Docker/Sail y optimización de consultas SQL. Trabajo bajo metodologías ágiles (Scrum/Kanban) entregando valor constante.
+                </ItemExperiencia>
+
+                <ItemExperiencia 
+                    fecha="2023 - 2025"
+                    rol="Desarrollo de Aplicaciones Multiplataforma (DAM)"
+                    empresa="Florida Campus Alzira"
+                >
+                    Ciclo Formativo de Grado Superior. Especialización en desarrollo backend y arquitectura de software.
+                </ItemExperiencia>
+
+                <ItemExperiencia 
+                    fecha="2021 - 2023"
+                    rol="Técnico en Sistemas Microinformáticos y Redes"
+                    empresa="Academia Almi"
+                >
+                    Base sólida en administración de sistemas, redes y hardware.
+                </ItemExperiencia>
+
+            </div>
+        </div>
+    </section>
+
+	<section id="lab">
+        <div class="container">
+            <h2 class="section-title" style="border-color: var(--neon-accent);">
+                Laboratorio <span style="font-size:1rem; color:var(--text-muted)" class="mono-font">// Experimental</span>
+            </h2>
+            <p style="margin-bottom: 40px; color: #888;">Un espacio donde "rompo cosas" para aprender. Bots, scripts de IA y prototipos rápidos.</p>
+            
+            <div class="lab-grid">
+                {experimentosLab.map((exp) => (
+                    <CardLab 
+                        link={exp.link}
+                        icono={exp.icono}
+                        titulo={exp.titulo}
+                        descripcion={exp.descripcion}
+                    />
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h2>¿Hablamos de código?</h2>
+                <p style="color: #888; margin: 20px 0;">Estoy disponible para discutir arquitectura, Laravel o nuevas oportunidades.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="mailto:sanpablorafa@gmail.com" class="btn">sanpablorafa@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/rafaspg" target="_blank" class="btn" style="border-color: #0077b5; color: #0077b5;">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</Layout>

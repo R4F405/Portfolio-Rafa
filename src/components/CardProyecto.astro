@@ -1,0 +1,36 @@
+---
+// src/components/CardProyecto.astro
+
+// 1. Definimos qué datos (Props) va a recibir esta tarjeta
+interface Props {
+    titulo: string;
+    descripcion: string;
+    caracteristicas: string[];
+    tags: string[];
+    destacado?: boolean; // Opcional: Para darle el brillo verde al proyecto principal
+}
+
+// 2. Extraemos los datos
+const { titulo, descripcion, caracteristicas, tags, destacado = false } = Astro.props;
+---
+
+<article class="card" style={destacado ? "border-color: var(--neon-primary);" : ""}>
+    <div>
+        <h3 class={destacado ? "neon-text" : ""}>{titulo}</h3>
+        <p style="margin-top: 10px; margin-bottom: 15px; color: #ccc;">
+            {descripcion}
+        </p>
+        
+        <ul style="list-style: none; color: #999; font-size: 0.9rem; margin-bottom: 20px;">
+            {caracteristicas.map((item) => (
+                <li>• {item}</li>
+            ))}
+        </ul>
+    </div>
+    
+    <div class="tags">
+        {tags.map((tag) => (
+            <span>{tag}</span>
+        ))}
+    </div>
+</article>

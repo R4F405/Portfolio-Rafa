@@ -1,0 +1,30 @@
+---
+// src/components/ItemExperiencia.astro
+
+interface Props {
+    fecha: string;
+    rol: string;
+    empresa: string;
+    ubicacion?: string; // Opcional
+    actual?: boolean;   // Opcional, por defecto será false
+}
+
+const { fecha, rol, empresa, ubicacion, actual = false } = Astro.props;
+---
+
+<div class="timeline-item">
+    <div class="timeline-dot" style={!actual ? "background: var(--bg-color); border-color: #444;" : ""}></div>
+    
+    <span class="date">{fecha}</span>
+    <h3 class="role">{rol}</h3>
+    
+    <div>
+        <span class="company" style={!actual ? "color: #888;" : ""}>{empresa}</span>
+        
+        {ubicacion && <span class="location">{ubicacion}</span>}
+    </div>
+    
+    <p style={actual ? "color: #aaa; margin-top: 10px;" : "color: #666; margin-top: 10px;"}>
+        <slot />
+    </p>
+</div>
