@@ -15,13 +15,13 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
     <ClientRouter /> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
     
     <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href={`${baseUrl}style.css`}>
+    <link rel="stylesheet" href={`${baseUrl}/style.css`}>
 </head>
 <body>
 
@@ -33,10 +33,10 @@ const baseUrl = import.meta.env.BASE_URL;
                 <a href={baseUrl} class="logo">RAFA<span class="neon-text">.DEV</span></a>
                 <div class="nav-links">
                     <a href={baseUrl}>Perfil</a>
-                    <a href={`${baseUrl}proyectos`}>Proyectos</a>
-                    <a href={`${baseUrl}experiencia`}>Trayectoria</a>
-                    <a href={`${baseUrl}laboratorio`}>Laboratorio</a>
-                    <a href={`${baseUrl}contacto`}>Contacto</a>
+                    <a href={`${baseUrl}/proyectos`}>Proyectos</a>
+                    <a href={`${baseUrl}/experiencia`}>Trayectoria</a>
+                    <a href={`${baseUrl}/laboratorio`}>Laboratorio</a>
+                    <a href={`${baseUrl}/contacto`}>Contacto</a>
                 </div>
             </nav>
         </div>
@@ -52,6 +52,6 @@ const baseUrl = import.meta.env.BASE_URL;
         </div>
     </footer>
 
-    <script is:inline src={`${baseUrl}script.js`} data-astro-rerun></script>
+    <script is:inline src={`${baseUrl}/script.js`} data-astro-rerun></script>
 </body>
 </html>
