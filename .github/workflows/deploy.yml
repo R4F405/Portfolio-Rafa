@@ -22,10 +22,6 @@ jobs:
         
       - name: Install, build, and upload your site
         uses: withastro/action@v3
-        with:
-          # Puedes especificar tu gestor de paquetes si no usas npm por defecto.
-          # Astro action lo suele detectar solo midiendo tu pnpm-lock.yaml o package-lock.json.
-          # package-manager: npm
 
   deploy:
     needs: build
