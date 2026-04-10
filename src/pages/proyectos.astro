@@ -1,49 +1,252 @@
 ---
+// src/pages/proyectos.astro
 import Layout from '../layouts/Layout.astro';
-import CardProyecto from '../components/CardProyecto.astro';
 ---
 
 <Layout title="Proyectos | Rafa San Pablo">
-    <section id="projects" style="padding-top: 150px; min-height: 100vh;">
+    <section id="projects" style="padding-top: 15vh; min-height: 100vh; padding-bottom: 100px;">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            
+            <div style="margin-bottom: 60px;">
+                <h2 class="section-title" style="margin-bottom: 10px;">Proyectos <span style="color: #444;">Destacados</span></h2>
+                <p style="color: #888; font-size: 1.1rem;">Sistemas en producción y arquitecturas en desarrollo.</p>
+            </div>
+
             <div class="projects-grid">
                 
-                <CardProyecto 
-                    titulo="RapidGest SaaS"
-                    descripcion="Plataforma integral de gestión empresarial que transforma operaciones diarias. Desarrollo de APIs RESTful robustas y frontend reactivo."
-                    caracteristicas={[
-                        "Autenticación multi-proveedor (Jetstream)",
-                        "Gestión documental Cloud (AWS S3)",
-                        "Testing automatizado riguroso (PestPHP)"
-                    ]}
-                    tags={["Laravel 11", "Livewire 3", "Redis", "Docker"]}
-                    destacado={true} 
-                />
+                <article class="project-card" style="--card-neon: var(--neon-primary);">
+                    <div class="glow-line"></div>
+                    
+                    <div class="project-header">
+                        <h3><a href="https://rapidgest.com/" target="_blank" class="project-link">RapidGest SaaS ↗</a></h3>
+                        <span class="status-badge status-prod">En Producción</span>
+                    </div>
+                    
+                    <p class="project-desc">
+                        Plataforma integral de gestión empresarial que transforma operaciones diarias. Desarrollo de APIs RESTful robustas y frontend reactivo para alta concurrencia.
+                    </p>
+                    
+                    <ul class="project-features">
+                        <li>Autenticación multi-proveedor (Jetstream)</li>
+                        <li>Arquitectura Multi-Equipo y procesamiento asíncrono</li>
+                        <li>Testing automatizado riguroso (PestPHP)</li>
+                    </ul>
+                    
+                    <div class="tags">
+                        <span>Laravel 11</span>
+                        <span>Livewire 3</span>
+                        <span>Redis</span>
+                        <span>Docker</span>
+                    </div>
+                </article>
 
-                <CardProyecto 
-                    titulo="API Core Architecture"
-                    descripcion="Base arquitectónica para microservicios escalables. Implementación de patrones de diseño Clean Code y documentación automática."
-                    caracteristicas={[
-                        "Recursos API optimizados",
-                        "Integración Swagger/OpenAPI",
-                        "Seguridad con Laravel Sanctum"
-                    ]}
-                    tags={["PHP 8.2", "MySQL", "Postman"]}
-                />
+                <article class="project-card" style="--card-neon: #7000ff;">
+                    <div class="glow-line"></div>
+                    
+                    <div class="project-header">
+                        <h3><a href="https://rapidgest.com/" target="_blank" class="project-link">RapidGest KMP ↗</a></h3>
+                        <span class="status-badge status-dev">En Desarrollo</span>
+                    </div>
+                    
+                    <p class="project-desc">
+                        Ecosistema de apps nativas unificado con Kotlin Multiplatform. Funciona en Android e iOS, con la base arquitectónica preparada para dar el salto a Escritorio. 
+                    </p>
+                    
+                    <ul class="project-features">
+                        <li>Sincronización directa con la BBDD de RapidGest Web</li>
+                        <li>Arquitectura <i>Offline-First</i>: persistencia local sin conexión</li>
+                        <li>Código de negocio compartido (Android/iOS/Desktop)</li>
+                    </ul>
+                    
+                    <div class="tags">
+                        <span>Kotlin Multiplatform</span>
+                        <span>Android / iOS</span>
+                        <span>SQLite Local</span>
+                    </div>
+                </article>
 
-                <CardProyecto 
-                    titulo="Mini Task Manager"
-                    descripcion="Gestor de tareas SPA (Single Page Application) robusto y reactivo. Gestión de estados en tiempo real sin recargas de página."
-                    caracteristicas={[
-                        "Stack TALL (Tailwind, Alpine, Laravel, Livewire)",
-                        "Exportación a PDF (DomPDF) y Modo Oscuro",
-                        "Tests Automatizados (PestPHP)"
-                    ]}
-                    tags={["Laravel 12", "Livewire 3", "Alpine.js", "Tailwind"]}
-                />
+                <article class="project-card" style="--card-neon: #00d8ff;">
+                    <div class="glow-line"></div>
+                    
+                    <div class="project-header">
+                        <h3>Mini Task Manager</h3>
+                        <span class="status-badge status-prod">En Producción</span>
+                    </div>
+                    
+                    <p class="project-desc">
+                        Gestor de tareas SPA (Single Page Application) robusto y reactivo. Gestión de estados en tiempo real sin recargas de página mediante el ecosistema TALL.
+                    </p>
+                    
+                    <ul class="project-features">
+                        <li>Stack TALL (Tailwind, Alpine, Laravel, Livewire)</li>
+                        <li>Exportación dinámica a PDF (DomPDF)</li>
+                        <li>Cobertura total con Tests Automatizados (PestPHP)</li>
+                    </ul>
+                    
+                    <div class="tags">
+                        <span>Laravel 12</span>
+                        <span>Livewire 3</span>
+                        <span>Alpine.js</span>
+                        <span>Tailwind</span>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
 </Layout>
+
+<style>
+    .projects-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+        gap: 30px; 
+    }
+
+    /* Diseño de la Tarjeta */
+    .project-card {
+        position: relative;
+        padding: 35px;
+        background: rgba(255, 255, 255, 0.015);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, background 0.3s ease;
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .project-card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        transform: translateY(-5px);
+        border-color: rgba(255,255,255,0.08);
+    }
+
+    /* La línea vertical brillante */
+    .glow-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--card-neon);
+        box-shadow: 0 0 15px var(--card-neon);
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    .project-card:hover .glow-line {
+        opacity: 1;
+    }
+
+    /* Cabecera (Título y Badge) */
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    .project-header h3 {
+        font-size: 1.4rem;
+        color: #fff;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    /* Estilos del Enlace (Interactividad) */
+    .project-link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: inline-block;
+    }
+
+    .project-link:hover {
+        color: var(--card-neon);
+    }
+
+    /* Etiquetas de Estado */
+    .status-badge {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+        white-space: nowrap;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .status-prod {
+        color: #00ff88;
+        background: rgba(0, 255, 136, 0.1);
+        border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+
+    .status-dev {
+        color: #ff9900;
+        background: rgba(255, 153, 0, 0.1);
+        border: 1px solid rgba(255, 153, 0, 0.2);
+    }
+
+    /* Contenido */
+    .project-desc {
+        color: #aaa;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        margin-top: 5px;
+    }
+
+    .project-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        flex-grow: 1;
+    }
+
+    .project-features li {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 15px;
+    }
+
+    .project-features li::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        color: var(--card-neon);
+        font-weight: bold;
+    }
+
+    /* Tags tecnológicos */
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 20px;
+    }
+
+    .tags span {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.75rem;
+        color: #ccc;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.05);
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition: color 0.3s, border-color 0.3s;
+    }
+
+    .project-card:hover .tags span {
+        color: var(--card-neon);
+        border-color: rgba(255,255,255,0.1);
+    }
+</style>

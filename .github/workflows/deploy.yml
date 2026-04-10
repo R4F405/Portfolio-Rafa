@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Ejecuta el workflow cada vez que haces push a la rama `main`
+  push:
+    branches: [ main ]
+  # Permite ejecutar este workflow manualmente desde la pestaña Actions en GitHub.
+  workflow_dispatch:
+
+# Permite a este trabajo clonar el repositorio y crear un despliegue de páginas
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        with:
+          # Puedes especificar tu gestor de paquetes si no usas npm por defecto.
+          # Astro action lo suele detectar solo midiendo tu pnpm-lock.yaml o package-lock.json.
+          # package-manager: npm
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

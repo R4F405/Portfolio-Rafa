@@ -5,26 +5,130 @@ interface Props {
     fecha: string;
     rol: string;
     empresa: string;
-    ubicacion?: string; // Opcional
-    actual?: boolean;   // Opcional, por defecto será false
+    ubicacion?: string; 
+    actual?: boolean;   
+    colorNeon?: string; // Nuevo: Para darle un color único a cada etapa
 }
 
-const { fecha, rol, empresa, ubicacion, actual = false } = Astro.props;
+const { fecha, rol, empresa, ubicacion, actual = false, colorNeon = "var(--neon-primary)" } = Astro.props;
 ---
 
-<div class="timeline-item">
-    <div class="timeline-dot" style={!actual ? "background: var(--bg-color); border-color: #444;" : ""}></div>
+<div class="timeline-item" style={`--item-color: ${colorNeon};`}>
     
-    <span class="date">{fecha}</span>
-    <h3 class="role">{rol}</h3>
-    
-    <div>
-        <span class="company" style={!actual ? "color: #888;" : ""}>{empresa}</span>
-        
-        {ubicacion && <span class="location">{ubicacion}</span>}
+    <div class="timeline-connector">
+        <div class={actual ? "timeline-dot actual-dot" : "timeline-dot"}></div>
+        <div class="timeline-line"></div>
     </div>
     
-    <p style={actual ? "color: #aaa; margin-top: 10px;" : "color: #666; margin-top: 10px;"}>
-        <slot />
-    </p>
+    <div class="timeline-card">
+        <span class="fecha">{fecha}</span>
+        <h3 class="rol">{rol}</h3>
+        
+        <div class="empresa-wrapper">
+            <span class="empresa">{empresa}</span>
+            {ubicacion && <span class="ubicacion">| {ubicacion}</span>}
+        </div>
+        
+        <p class="descripcion">
+            <slot />
+        </p>
+    </div>
 </div>
+
+<style>
+    .timeline-item {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    /* --- Conector (Línea y Punto) --- */
+    .timeline-connector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20px;
+        flex-shrink: 0;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--bg-color);
+        border: 2px solid var(--item-color);
+        box-shadow: 0 0 10px rgba(0,0,0,0);
+        transition: 0.3s ease;
+        z-index: 2;
+        margin-top: 5px;
+    }
+
+    .actual-dot {
+        background-color: var(--item-color);
+        box-shadow: 0 0 15px var(--item-color);
+        animation: pulse-dot 2s infinite;
+    }
+
+    .timeline-line {
+        width: 2px;
+        flex-grow: 1;
+        background: linear-gradient(to bottom, var(--item-color), rgba(255,255,255,0.05));
+        margin-top: 10px;
+        border-radius: 2px;
+        opacity: 0.5;
+    }
+
+    /* --- Tarjeta Glassmorphism --- */
+    .timeline-card {
+        flex-grow: 1;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.015);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .timeline-card:hover {
+        background: rgba(255, 255, 255, 0.03);
+        transform: translateY(-3px);
+        border-color: rgba(255,255,255,0.08);
+    }
+
+    .timeline-item:hover .timeline-dot {
+        background-color: var(--item-color);
+        box-shadow: 0 0 15px var(--item-color);
+    }
+
+    /* --- Textos --- */
+    .fecha {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.85rem;
+        color: var(--item-color);
+        background: rgba(255, 255, 255, 0.03);
+        padding: 4px 10px;
+        border-radius: 6px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    .rol {
+        font-size: 1.4rem;
+        color: #fff;
+        margin-bottom: 5px;
+        letter-spacing: -0.5px;
+    }
+
+    .empresa-wrapper {
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+    }
+
+    .empresa {
+        color: #ddd;
+        font-weight: 600;
+    }
+
+    .ubicacion {
+        color: #666;
