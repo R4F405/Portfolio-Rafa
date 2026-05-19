@@ -1,43 +1,26 @@
-# Astro Starter Kit: Minimal
+# Portfolio (2025)
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Personal portfolio site: project case studies, lightweight 3D and shader demos, bilingual copy (English and German).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built with **Vue 3**, **TypeScript**, and **Vite**. Motion via **GSAP** and **Lenis**, 3D via **three.js**, audio via **Howler**. GLSL is compiled through **vite-plugin-glsl**.
 
-## 🚀 Project Structure
+## Scripts
 
-Inside of your Astro project, you'll see the following folders and files:
+| Command        | Description                          |
+| -------------- | ------------------------------------ |
+| `npm run dev`   | Dev server on port **3000** (`strictPort`) |
+| `npm run build` | `vue-tsc` then production bundle to `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm run typecheck` | Typecheck only (`vue-tsc -b`) |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Content
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **Projects**: `src/content/projects/{en,de}/<slug>.ts` — copy, tags, media, links. Slugs must align with `projectIds` in `src/content/projects/index.ts`.
+- **Previews / listing**: `src/content/projects/previews/`.
+- **Tags**: variants and labels live in `src/components/tagVariants.ts` (used by `Tag.vue` and content types).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Stack (high level)
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Vue 3 (`<script setup>`), SCSS with shared mixins (`src/assets/styles/`)
+- i18n helpers under `src/i18n/`
+- WebGL / GLSL under `src/three/` where applicable
