@@ -1,7 +1,7 @@
 {
   "about": "Sobre mí",
-  "about-intro": "Desarrollador web enfocado en crear soluciones a medida y experimentar con nuevas tecnologías.<br />Actualmente desarrollo aplicaciones web empresariales (CRM/ERP) con Laravel adaptadas a normativas como Veri Factu, y en mi tiempo libre me encanta chatarrear y experimentar con proyectos en Python, React y experiencias interactivas.",
-  "about-tagline": "Desarrollo aplicaciones robustas con Laravel y experimento con proyectos en Python y React.",
+  "about-intro": "Desarrollador web enfocado en crear soluciones a medida y experimentar con nuevas tecnologías.<br />Actualmente desarrollo aplicaciones robustas con Laravel y Android Studio, adaptadas a normativas como Veri Factu, y en mi tiempo libre me encanta chatarrear y experimentar con proyectos en Python, React, Astro y experiencias interactivas.",
+  "about-tagline": "Desarrollo aplicaciones robustas con Laravel y Android Studio, y experimento con proyectos en Python, React y Astro.",
   "back-to-home": "Volver al inicio",
   "contact": "Contacto",
   "description": "Descripción",

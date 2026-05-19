@@ -1,7 +1,7 @@
 {
   "about": "About",
-  "about-intro": "Web developer focused on building custom solutions and experimenting with new technologies.<br />Currently developing enterprise web applications (CRM/ERP) with Laravel tailored to regulations like Veri Factu, while in my free time I love tinkering with Python, React, and interactive projects.",
-  "about-tagline": "Building robust web applications with Laravel and tinkering with Python and React projects.",
+  "about-intro": "Web developer focused on building custom solutions and experimenting with new technologies.<br />Currently building robust applications with Laravel and Android Studio tailored to regulations like Veri Factu, while in my free time I love tinkering with Python, React, Astro, and interactive projects.",
+  "about-tagline": "Building robust applications with Laravel and Android Studio, and tinkering with Python, React, and Astro projects.",
   "back-to-home": "Back to home",
   "contact": "Contact",
   "description": "Description",
