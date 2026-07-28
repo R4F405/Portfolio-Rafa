@@ -6,12 +6,15 @@ Built with **Vue 3**, **TypeScript**, and **Vite**. Motion via **GSAP** and **Le
 
 ## Scripts
 
+Package manager: **pnpm** (pinned via `packageManager` in `package.json`; `corepack enable` to use it).
+
 | Command        | Description                          |
 | -------------- | ------------------------------------ |
-| `npm run dev`   | Dev server on port **3000** (`strictPort`) |
-| `npm run build` | `vue-tsc` then production bundle to `dist/` |
-| `npm run preview` | Serve the production build locally |
-| `npm run typecheck` | Typecheck only (`vue-tsc -b`) |
+| `pnpm install` | Install dependencies |
+| `pnpm dev`   | Dev server on port **3000** (`strictPort`) |
+| `pnpm build` | `vue-tsc` then production bundle to `dist/` |
+| `pnpm preview` | Serve the production build locally |
+| `pnpm typecheck` | Typecheck only (`vue-tsc -b`) |
 
 ## Content
 

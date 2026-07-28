@@ -91,6 +91,31 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #95630e;
       color: white;
     }
+
+    &-laravel {
+      background-color: #f53003;
+      color: white;
+    }
+
+    &-livewire {
+      background-color: #4e56a6;
+      color: white;
+    }
+
+    &-alpine {
+      background-color: #77c1d2;
+      color: #0f2e36;
+    }
+
+    &-php {
+      background-color: #777bb4;
+      color: white;
+    }
+
+    &-mysql {
+      background-color: #00618a;
+      color: white;
+    }
   }
 }
 </style>
