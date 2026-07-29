@@ -6,6 +6,7 @@ import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
 import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
 import thumbnailComparador from "../../../assets/thumbnails/comparador.webp";
+import thumbnailWhistleblowing from "../../../assets/thumbnails/whistleblowing.webp";
 
 import type { ProjectPreview } from "../../types";
 
@@ -21,6 +22,12 @@ export default [
     slug: "smartsheets",
     thumbnail: thumbnailSmartsheets,
     description: "Interface layer for Smartsheet",
+  },
+  {
+    title: "Whistleblowing channel",
+    slug: "whistleblowing",
+    thumbnail: thumbnailWhistleblowing,
+    description: "Anonymous reports, Law 2/2023",
   },
   {
     title: "Comparator and migrator",
