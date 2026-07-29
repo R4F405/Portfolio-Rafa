@@ -131,6 +131,16 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #38bdf8;
       color: #06283a;
     }
+
+    &-openai {
+      background-color: #10a37f;
+      color: white;
+    }
+
+    &-bootstrap {
+      background-color: #7952b3;
+      color: white;
+    }
   }
 }
 </style>

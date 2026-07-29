@@ -5,6 +5,7 @@ import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
 import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
 import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
+import thumbnailComparador from "../../../assets/thumbnails/comparador.webp";
 
 import type { ProjectPreview } from "../../types";
 
@@ -20,6 +21,12 @@ export default [
     slug: "smartsheets",
     thumbnail: thumbnailSmartsheets,
     description: "Capa de interfaz sobre Smartsheet",
+  },
+  {
+    title: "Comparador y migrador",
+    slug: "comparador",
+    thumbnail: thumbnailComparador,
+    description: "Extracción de tarifas con IA",
   },
   {
     title: "CubeWar",

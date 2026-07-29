@@ -20,7 +20,9 @@ export type TagVariant =
   | "mysql"
   | "vue"
   | "inertia"
-  | "tailwind";
+  | "tailwind"
+  | "openai"
+  | "bootstrap";
 
 export const tagLabels = {
   three: "Three.js",
@@ -45,4 +47,6 @@ export const tagLabels = {
   vue: "Vue 3",
   inertia: "Inertia.js",
   tailwind: "Tailwind",
+  openai: "OpenAI API",
+  bootstrap: "Bootstrap",
 } as const satisfies Record<TagVariant, string>;
