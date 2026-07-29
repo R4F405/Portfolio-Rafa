@@ -116,6 +116,21 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #00618a;
       color: white;
     }
+
+    &-vue {
+      background-color: #42b883;
+      color: #0d2b1e;
+    }
+
+    &-inertia {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    &-tailwind {
+      background-color: #38bdf8;
+      color: #06283a;
+    }
   }
 }
 </style>

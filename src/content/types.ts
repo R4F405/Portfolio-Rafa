@@ -12,6 +12,8 @@ export interface ProjectContent {
   description?: string;
   videoBorder?: boolean;
   live?: string;
+  /** Muestra el botón "Ver en vivo" desactivado, con aviso de web en desarrollo al pasar el cursor. */
+  liveComingSoon?: boolean;
   source?: string;
   components?: ProjectComponent[];
 }

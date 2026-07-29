@@ -17,7 +17,10 @@ export type TagVariant =
   | "livewire"
   | "alpine"
   | "php"
-  | "mysql";
+  | "mysql"
+  | "vue"
+  | "inertia"
+  | "tailwind";
 
 export const tagLabels = {
   three: "Three.js",
@@ -39,4 +42,7 @@ export const tagLabels = {
   alpine: "Alpine.js",
   php: "PHP",
   mysql: "MySQL",
+  vue: "Vue 3",
+  inertia: "Inertia.js",
+  tailwind: "Tailwind",
 } as const satisfies Record<TagVariant, string>;

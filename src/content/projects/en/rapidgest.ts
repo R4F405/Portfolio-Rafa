@@ -14,7 +14,7 @@ export default {
   videoBorder: false,
   live: "https://rapidgest.com",
   description:
-    "Rapidgest is a cloud business management platform for freelancers, small companies and accounting firms: invoicing, time tracking, work orders, customers and payments in one place.<br/><br/>I work across the whole product: VeriFactu-ready invoicing, digital time clock, job scheduling and OCR-based expense scanning, built with Laravel, Livewire, Alpine.js and MySQL.",
+    "Rapidgest is the cloud business management platform built at <strong>Softtalia</strong>, the company I currently work for: invoicing, time tracking, work orders, customers and payments for freelancers, small companies and accounting firms, all in one place.<br/><br/>It is my day-to-day project, under active development every day across the whole product: VeriFactu-ready invoicing, digital time clock, work order calendar and AI-powered expense scanning, built with Laravel, Livewire, Alpine.js and MySQL.",
   components: [
     {
       type: "media",

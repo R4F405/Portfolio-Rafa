@@ -4,6 +4,7 @@ import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
 import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
 import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
+import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
 
 import type { ProjectPreview } from "../../types";
 
@@ -13,6 +14,12 @@ export default [
     slug: "rapidgest",
     thumbnail: thumbnailRapidgest,
     description: "Business management SaaS",
+  },
+  {
+    title: "SmartSheets Panel",
+    slug: "smartsheets",
+    thumbnail: thumbnailSmartsheets,
+    description: "Interface layer for Smartsheet",
   },
   {
     title: "CubeWar",

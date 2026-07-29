@@ -39,6 +39,20 @@ watch(projectId, () => {
           t("live-view")
         }}</Button>
       </Link>
+      <div
+        v-else-if="content.liveComingSoon"
+        class="project-hero-button project-hero-button-soon"
+        aria-disabled="true"
+      >
+        <Button renderAs="div" variant="accent" class="children-unclickable">
+          <span class="project-hero-button-soon-labels">
+            <span class="project-hero-button-soon-label">{{ t("live-view") }}</span>
+            <span class="project-hero-button-soon-label project-hero-button-soon-label-hover">{{
+              t("website-in-progress")
+            }}</span>
+          </span>
+        </Button>
+      </div>
       <Link
         v-if="content.source"
         :href="content.source"
@@ -69,6 +83,38 @@ watch(projectId, () => {
 
     @include mixins.mq("md") {
       width: fit-content;
+    }
+
+    // Botón sin destino: no navega, y al pasar el cursor avisa de que la web está en desarrollo.
+    &-soon {
+      cursor: not-allowed;
+
+      &-labels {
+        display: grid;
+        // Ambas etiquetas ocupan la misma celda: el ancho del botón no salta al cambiar el texto.
+        grid-template-areas: "label";
+        align-items: center;
+        justify-items: center;
+      }
+
+      &-label {
+        grid-area: label;
+        transition: opacity 0.15s ease-in-out;
+
+        &-hover {
+          opacity: 0;
+        }
+      }
+
+      @include mixins.hover {
+        &:hover .project-hero-button-soon-label {
+          opacity: 0;
+
+          &-hover {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 

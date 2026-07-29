@@ -14,7 +14,7 @@ export default {
   videoBorder: false,
   live: "https://rapidgest.com",
   description:
-    "Rapidgest es un software de gestión en la nube para autónomos, pymes y gestorías: facturación, fichaje, partes de trabajo, clientes y cobros en un solo lugar.<br/><br/>Trabajo sobre el producto completo: facturación adaptada a VeriFactu, control horario, agenda de trabajos y escaneo de gastos con OCR, construido con Laravel, Livewire, Alpine.js y MySQL.",
+    "Rapidgest es el software de gestión en la nube de <strong>Softtalia</strong>, la empresa en la que trabajo actualmente: facturación, fichaje, partes de trabajo, clientes y cobros para autónomos, pymes y gestorías en un solo lugar.<br/><br/>Es mi proyecto del día a día. Desarrollo activo a diario sobre todo el producto: facturación adaptada a VeriFactu, control horario, calendario de órdenes de trabajo y escaneo de gastos con IA, con Laravel, Livewire, Alpine.js y MySQL.",
   components: [
     {
       type: "media",
