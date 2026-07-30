@@ -29,7 +29,9 @@ export type TagVariant =
   | "fastapi"
   | "playwright"
   | "sqlite"
-  | "docker";
+  | "docker"
+  | "unity"
+  | "csharp";
 
 export const tagLabels = {
   three: "Three.js",
@@ -63,4 +65,6 @@ export const tagLabels = {
   playwright: "Playwright",
   sqlite: "SQLite",
   docker: "Docker",
+  unity: "Unity",
+  csharp: "C#",
 } as const satisfies Record<TagVariant, string>;

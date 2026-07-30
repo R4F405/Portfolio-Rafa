@@ -1,13 +1,10 @@
-import thumbnailCubeWar from "../../../assets/thumbnails/cubewar.webp";
-import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
 //import thumbnailParticles from "../../../assets/thumbnails/particles.webp";
-import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
-import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
 import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
 import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
 import thumbnailComparador from "../../../assets/thumbnails/comparador.webp";
 import thumbnailWhistleblowing from "../../../assets/thumbnails/whistleblowing.webp";
 import thumbnailDiscordBots from "../../../assets/thumbnails/discord-bots.webp";
+import thumbnailOrcAttack from "../../../assets/thumbnails/orc-attack.webp";
 import thumbnailMultiScraping from "../../../assets/thumbnails/multiscraping.webp";
 
 import type { ProjectPreview } from "../../types";
@@ -50,22 +47,10 @@ export default [
     description: "GitHub and Jira webhooks",
   },
   {
-    title: "CubeWar",
-    slug: "cubewar",
-    thumbnail: thumbnailCubeWar,
-    description: "Multiplayer strategy game",
-  },
-  {
-    title: "Quibbo",
-    slug: "quibbo",
-    thumbnail: thumbnailQuibbo,
-    description: "Multiplayer gaming platform",
-  },
-  {
-    title: "Sharkie",
-    slug: "sharkie",
-    thumbnail: thumbnailSharkie,
-    description: "2D adventure game",
+    title: "Orc Attack",
+    slug: "orc-attack",
+    thumbnail: thumbnailOrcAttack,
+    description: "Unity rogue-like, final degree project",
   },
   /**  {
     title: "WebGL Particles",
@@ -73,10 +58,4 @@ export default [
     thumbnail: thumbnailParticles,
     description: "Dynamic 3D particles",
   }, */
-  {
-    title: "Pokédex",
-    slug: "pokedex",
-    thumbnail: thumbnailPokedex,
-    description: "Open-source learning project",
-  },
 ] as const satisfies ProjectPreview[];
