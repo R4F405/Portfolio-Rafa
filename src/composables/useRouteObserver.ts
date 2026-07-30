@@ -11,8 +11,16 @@ export const path = ref(typeof window !== "undefined" ? window.location.pathname
 // COMPUTED HELPERS
 // -----------------------------------------------------------------------------
 
+// Prefijo del despliegue ("/Portfolio-Rafa" en GitHub Pages, "" con dominio propio).
+// Las rutas se escriben sin él en el resto de la app, así que aquí se descuenta.
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+export const stripBase = (path: string) => {
+  return BASE && path.startsWith(BASE) ? path.slice(BASE.length) || "/" : path;
+};
+
 export const isProjectRoute = (path: string) => {
-  return path.match(/^\/project\/([^/]+)$/);
+  return stripBase(path).match(/^\/project\/([^/]+)$/);
 };
 
 export const projectId = computed(() => {

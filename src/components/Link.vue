@@ -13,13 +13,19 @@ const props = defineProps<{
   replace?: boolean;
 }>();
 
-const resolvedTo = computed(() => {
-  const base = props.href || props.to || "/";
+// Prefijo del despliegue. Las rutas se escriben sin él y se añade aquí.
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-  let path = base;
+const resolvedTo = computed(() => {
+  let path = props.href || props.to || "/";
 
   if (path.length > 1 && path.endsWith("/")) {
     path = path.slice(0, -1);
+  }
+
+  // Solo las rutas internas llevan prefijo; los enlaces externos van tal cual.
+  if (BASE && path.startsWith("/") && !path.startsWith(`${BASE}/`)) {
+    path = BASE + path;
   }
 
   return path;
@@ -47,7 +53,7 @@ const handleClick = (event: MouseEvent) => {
   <component
     v-if="props.external"
     :is="props.renderAs || 'a'"
-    :href="props.href || props.to"
+    :href="resolvedTo"
     target="_blank"
     rel="noopener noreferrer"
     v-bind="attrs"

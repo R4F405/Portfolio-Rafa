@@ -3,6 +3,8 @@ import vue from "@vitejs/plugin-vue";
 import glsl from "vite-plugin-glsl";
 
 export default defineConfig({
+  // GitHub Pages sirve el sitio en /Portfolio-Rafa/. Con un dominio propio, volver a "/".
+  base: "/Portfolio-Rafa/",
   plugins: [
     vue(),
     glsl({
