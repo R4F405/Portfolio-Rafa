@@ -1,29 +1,43 @@
-# Portfolio (2025)
+# Portfolio — Rafa San Pablo
 
-Personal portfolio site: project case studies, lightweight 3D and shader demos, bilingual copy (English and German).
+Sitio personal con los proyectos en los que trabajo: fichas de cada uno, capturas y algún experimento en 3D. Textos en **castellano e inglés**.
 
-Built with **Vue 3**, **TypeScript**, and **Vite**. Motion via **GSAP** and **Lenis**, 3D via **three.js**, audio via **Howler**. GLSL is compiled through **vite-plugin-glsl**.
+Publicado en <https://r4f405.github.io/Portfolio-Rafa/>.
+
+Construido con **Vue 3**, **TypeScript** y **Vite**. Animación con **GSAP** y **Lenis**, 3D con **three.js**, audio con **Howler**. El GLSL se compila con **vite-plugin-glsl**.
 
 ## Scripts
 
-Package manager: **pnpm** (pinned via `packageManager` in `package.json`; `corepack enable` to use it).
+Gestor de paquetes: **pnpm** (fijado con `packageManager` en `package.json`; `corepack enable` para usarlo).
 
-| Command        | Description                          |
-| -------------- | ------------------------------------ |
-| `pnpm install` | Install dependencies |
-| `pnpm dev`   | Dev server on port **3000** (`strictPort`) |
-| `pnpm build` | `vue-tsc` then production bundle to `dist/` |
-| `pnpm preview` | Serve the production build locally |
-| `pnpm typecheck` | Typecheck only (`vue-tsc -b`) |
+| Comando          | Descripción                                     |
+| ---------------- | ----------------------------------------------- |
+| `pnpm install`   | Instala dependencias                            |
+| `pnpm dev`       | Servidor de desarrollo en el puerto **3000**    |
+| `pnpm build`     | `vue-tsc` y bundle de producción en `dist/`     |
+| `pnpm preview`   | Sirve la build de producción en local           |
+| `pnpm typecheck` | Solo comprobación de tipos (`vue-tsc -b`)       |
 
-## Content
+## Contenido
 
-- **Projects**: `src/content/projects/{en,de}/<slug>.ts` — copy, tags, media, links. Slugs must align with `projectIds` in `src/content/projects/index.ts`.
-- **Previews / listing**: `src/content/projects/previews/`.
-- **Tags**: variants and labels live in `src/components/tagVariants.ts` (used by `Tag.vue` and content types).
+- **Proyectos**: `src/content/projects/{es,en}/<slug>.ts` — texto, tags, imágenes y enlaces. Cada slug debe estar en `projectIds` (`src/content/projects/index.ts`).
+- **Listado**: `src/content/projects/previews/{es,en}.ts` — título, slug, miniatura y descripción corta de cada tarjeta.
+- **Tags**: los variantes y sus etiquetas están en `src/components/tagVariants.ts`, y su color en `Tag.vue`.
+- **Colores por proyecto**: una clase `.project-<slug>` en `src/assets/styles/projects.scss`.
+- **Miniaturas**: 540×304 en `src/assets/thumbnails/`. Imágenes de proyecto: 900×506 en `src/assets/images/projects/<slug>/`.
 
-## Stack (high level)
+## Despliegue
 
-- Vue 3 (`<script setup>`), SCSS with shared mixins (`src/assets/styles/`)
-- i18n helpers under `src/i18n/`
-- WebGL / GLSL under `src/three/` where applicable
+GitHub Pages sirve el sitio en la subcarpeta `/Portfolio-Rafa/`, por eso `vite.config.ts` define `base: "/Portfolio-Rafa/"`. Con un dominio propio hay que quitar esa línea.
+
+Las rutas internas se escriben sin prefijo (`/project/<slug>`); `Link.vue` lo añade y `useRouteObserver.ts` lo descuenta.
+
+## Páginas legales
+
+`public/legal.html` y `public/privacy.html`, con su versión en castellano en `public/es/`. Son HTML estático, fuera de la SPA.
+
+## Estructura
+
+- Vue 3 con `<script setup>`, SCSS y mixins compartidos en `src/assets/styles/`
+- i18n propio en `src/i18n/`, con las cadenas en `src/i18n/messages/namespaces/common/{es,en}.json`
+- WebGL y GLSL en `src/three/`

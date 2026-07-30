@@ -1,4 +1,3 @@
-//import thumbnailParticles from "../../../assets/thumbnails/particles.webp";
 import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
 import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
 import thumbnailComparador from "../../../assets/thumbnails/comparador.webp";
@@ -52,10 +51,4 @@ export default [
     thumbnail: thumbnailOrcAttack,
     description: "Rogue-like en Unity, TFG de DAM",
   },
-  /**  {
-    title: "WebGL Partikel",
-    slug: "particles",
-    thumbnail: thumbnailParticles,
-    description: "Dynamische 3D Partikel",
-  }, */
 ] as const satisfies ProjectPreview[];
