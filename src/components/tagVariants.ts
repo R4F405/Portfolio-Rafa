@@ -31,7 +31,8 @@ export type TagVariant =
   | "sqlite"
   | "docker"
   | "unity"
-  | "csharp";
+  | "csharp"
+  | "ia";
 
 export const tagLabels = {
   three: "Three.js",
@@ -67,4 +68,5 @@ export const tagLabels = {
   docker: "Docker",
   unity: "Unity",
   csharp: "C#",
+  ia: "IA",
 } as const satisfies Record<TagVariant, string>;

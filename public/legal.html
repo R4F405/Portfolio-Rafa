@@ -1,131 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>Legal notice — Rafa San Pablo González</title>
+    <style>
+      :root {
+        --ink: #0b2a2c;
+        --muted: #5b7476;
+        --accent: #109a9d;
+        --bg: #ffffff;
+        --card: #f4fafa;
+        --line: #d7e9e9;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Notice - Rafa</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #e8f1f1;
+          --muted: #9db3b4;
+          --accent: #2ec4c7;
+          --bg: #0d1618;
+          --card: #142325;
+          --line: #24393b;
+        }
+      }
 
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        color: #091434;
-    }
-
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    #contet-container {
-        width: 1400px;
-        max-width: 100%;
-        padding: 15px;
+      * {
         box-sizing: border-box;
-        position: relative;
-    }
+      }
 
-    svg {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-    }
+      body {
+        margin: 0;
+        padding: 48px 20px 80px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+        font-size: 16px;
+      }
 
-    #text-container {
-        margin-top: 60px;
-    }
-</style>
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
 
-<body>
-    <div id="contet-container">
-        <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+      a {
+        color: var(--accent);
+      }
 
-            <path fill="#091434"
-                d="M3 14 24 2C28 0 28 0 32 2L53 14C56 16 56 17 56 19L56 43C56 46 55 47 51 49L32 59C28 61 28 61 24 59L5 49C1 47 0 46 0 43L0 19C0 17 0 16 3 14M28 4 5 17 28 28 51 17 28 4M53 20 30 31 30 56 53 44 53 20M40 42 33 35C33 35 32 34 33 33 34 32 35 33 36 34L36 34 43 41C44 42 44 42 43 43L35 51C35 51 34 52 33 51 32 50 33 49 33 49L40 42M16 42 23 35C23 35 24 34 23 33 22 32 21 33 20 34L13 41C12 42 12 42 13 43L21 51C21 51 22 52 23 51 24 50 23 49 23 49L16 42" />
+      .back {
+        display: inline-block;
+        margin-bottom: 32px;
+        font-weight: 600;
+        text-decoration: none;
+      }
 
-        </svg>
-        <div id="text-container">
-            <h1>Legal Notice</h1>
-            <p>Rafa San Pablo</p>
-            <p>Email: sanpablorafa@gmail.com</p>
-            <h1>Website Terms and Conditions of Use</h1>
+      .back:hover {
+        text-decoration: underline;
+      }
 
-            <h2>1. Terms</h2>
+      h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 0 0 8px;
+      }
 
-            <p>By accessing this Website, accessible from r4f405.github.io/Portfolio-Rafa/, you are agreeing to be bound by these Website
-                Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable
-                local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The
-                materials contained in this Website are protected by copyright and trade mark law.</p>
+      h2 {
+        font-size: 1.15rem;
+        margin: 40px 0 8px;
+      }
 
-            <h2>2. Use License</h2>
+      .updated {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0 0 32px;
+      }
 
-            <p>Permission is granted to temporarily download one copy of the materials on Rafa San Pablo's Website for
-                personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of
-                title, and under this license you may not:</p>
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin: 24px 0 8px;
+      }
 
-            <ul>
-                <li>modify or copy the materials;</li>
-                <li>use the materials for any commercial purpose or for any public display;</li>
-                <li>attempt to reverse engineer any software contained on Rafa San Pablo's Website;</li>
-                <li>remove any copyright or other proprietary notations from the materials; or</li>
-                <li>transferring the materials to another person or "mirror" the materials on any other server.</li>
-            </ul>
+      .card p {
+        margin: 4px 0;
+      }
 
-            <p>This will let Rafa San Pablo to terminate upon violations of any of these restrictions. Upon termination,
-                your viewing right will also be terminated and you should destroy any downloaded materials in your
-                possession whether it is printed or electronic format.</p>
+      ul {
+        padding-left: 22px;
+      }
 
-            <h2>3. Disclaimer</h2>
+      li {
+        margin-bottom: 6px;
+      }
 
-            <p>All the materials on Rafa San Pablo’s Website are provided "as is". Rafa San Pablo makes no warranties,
-                may it be expressed or implied, therefore negates all other warranties. Furthermore, Rafa San Pablo does
-                not make any representations concerning the accuracy or reliability of the use of the materials on its
-                Website or otherwise relating to such materials or any sites linked to this Website.</p>
+      footer {
+        margin-top: 56px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
 
-            <h2>4. Limitations</h2>
+  <body>
+    <main>
+      <a class="back" href="./">← Back to home</a>
 
-            <p>Rafa San Pablo or its suppliers will not be hold accountable for any damages that will arise with the use
-                or inability to use the materials on Rafa San Pablo’s Website, even if Rafa San Pablo or an authorized
-                representative of this Website has been notified, orally or written, of the possibility of such damage.
-                Some jurisdiction does not allow limitations on implied warranties or limitations of liability for
-                incidental damages, these limitations may not apply to you.</p>
+      <h1>Legal notice</h1>
+      <p class="updated">Last updated: 30 July 2026</p>
 
-            <h2>5. Revisions and Errata</h2>
+      <div class="card">
+        <p><strong>Owner:</strong> Rafa San Pablo González</p>
+        <p><strong>Contact email:</strong> <a href="mailto:sanpablorafa@gmail.com">sanpablorafa@gmail.com</a></p>
+        <p><strong>Website:</strong> https://r4f405.github.io/Portfolio-Rafa/</p>
+        <p>
+          <strong>Hosting:</strong> GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA, USA)
+        </p>
+      </div>
 
-            <p>The materials appearing on Rafa San Pablo’s Website may include technical, typographical, or photographic
-                errors. Rafa San Pablo will not promise that any of the materials in this Website are accurate,
-                complete, or current. Rafa San Pablo may change the materials contained on its Website at any time
-                without notice. Rafa San Pablo does not make any commitment to update the materials.</p>
+      <h2>1. Purpose of the site</h2>
+      <p>
+        This site is a <strong>personal portfolio</strong> published for informational purposes only. It exists to show
+        software development work and to offer a professional contact channel. No commercial activity takes place
+        through it: nothing is sold, there is no online contracting, no user accounts and no payment processing.
+      </p>
 
-            <h2>6. Links</h2>
+      <h2>2. Terms of use</h2>
+      <p>
+        Access to the site is free of charge and implies acceptance of this legal notice. Visitors agree to use the site
+        lawfully and not to use it for unlawful purposes, to damage, overload or impair it, or to attempt unauthorised
+        access.
+      </p>
 
-            <p>Rafa San Pablo has not reviewed all of the sites linked to its Website and is not responsible for the
-                contents of any such linked site. The presence of any link does not imply endorsement by Rafa San Pablo
-                of the site. The use of any linked website is at the user’s own risk.</p>
+      <h2>3. Intellectual property</h2>
+      <p>
+        The design, texts and code of this site belong to its owner, except as stated below. Reproduction, distribution
+        or modification without prior permission is not allowed, beyond the personal use inherent to simply browsing the
+        site.
+      </p>
+      <ul>
+        <li>
+          Screenshots of work carried out for companies or clients are published for demonstration purposes. The
+          software and data shown in them belong to their respective owners.
+        </li>
+        <li>
+          Projects released as open source are governed by the licence stated in their repository, not by this notice.
+        </li>
+        <li>
+          Third-party trademarks, trade names and logos appearing on the site (including Smartsheet, Discord, GitHub,
+          Jira, Laravel and Unity) belong to their respective owners. They are used solely to identify the technology or
+          service each project integrates with, and imply no affiliation, sponsorship or endorsement by those companies.
+        </li>
+      </ul>
 
-            <h2>7. Site Terms of Use Modifications</h2>
+      <h2>4. External links</h2>
+      <p>
+        The site links to third-party pages (repositories, professional networks, project websites). The owner does not
+        control their content or policies and accepts no responsibility for them. A link does not imply any
+        recommendation or relationship with the linked site.
+      </p>
 
-            <p>Rafa San Pablo may revise these Terms of Use for its Website at any time without prior notice. By using
-                this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
-            </p>
+      <h2>5. Liability</h2>
+      <p>
+        Content is published with all due care, but it may contain errors or become outdated. The owner does not
+        guarantee continuous availability of the site, which depends on a third-party hosting service, and is not liable
+        for damages arising from its use or from the inability to use it, except where the law does not allow such
+        exclusion.
+      </p>
 
-            <h2>8. Your Privacy</h2>
+      <h2>6. Data protection</h2>
+      <p>
+        This site does not collect personal data from visitors. Information about how data sent by email is handled is
+        set out in the <a href="privacy.html">privacy policy</a>.
+      </p>
 
-            <p>Please read our Privacy Policy.</p>
+      <h2>7. Changes</h2>
+      <p>
+        The owner may update this legal notice to reflect changes to the site or to applicable law. The version in force
+        is the one published on this page, bearing the date shown above.
+      </p>
 
-            <h2>9. Governing Law</h2>
+      <h2>8. Governing law</h2>
+      <p>
+        This notice is governed by Spanish law, in particular Act 34/2002 on information society services and electronic
+        commerce (LSSI-CE), Regulation (EU) 2016/679 (GDPR) and Organic Act 3/2018 (LOPDGDD). Any dispute shall be
+        subject to the courts of the owner's domicile, unless the law provides otherwise.
+      </p>
 
-            <p>Any claim related to Rafa San Pablo's Website shall be governed by the laws of Spain without regards to its
-                conflict of law provisions.</p>
-        </div>
-    </div>
-</body>
-
+      <footer>
+        <p>
+          <a href="privacy.html">Privacy policy</a> · <a href="es/legal.html">Versión en español</a> ·
+          <a href="./">Home</a>
+        </p>
+      </footer>
+    </main>
+  </body>
 </html>

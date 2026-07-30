@@ -13,6 +13,7 @@ export default {
   theme: "dark",
   tags: ["laravel", "livewire", "alpine", "tailwind", "mysql"],
   videoBorder: false,
+  liveComingSoon: true,
   description:
     "A whistleblowing platform compliant with Spanish <strong>Law 2/2023</strong>, built on one simple idea: data the system never stores cannot leak.<br/><br/>Whistleblowers file a report without an account and get a tracking code to check its status and talk to the case handler over an encrypted chat. A middleware overwrites their IP and strips the User-Agent before the request reaches the controller, attachments go through EXIF and GPS metadata cleaning, and the subject, description and messages are stored encrypted with AES-256-CBC.<br/><br/>On the company side there is a role hierarchy with per-area permissions, mandatory 2FA, an immutable audit log of every access and download, and log exports to XLSX, CSV and PDF with preview. Rounded off with a dual honeypot against bots and submission rate limiting keyed on an irreversible IP hash.",
   components: [

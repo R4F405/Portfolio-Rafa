@@ -12,7 +12,6 @@ export default {
   theme: "light",
   tags: ["laravel", "vue", "inertia", "tailwind", "mysql"],
   videoBorder: false,
-  liveComingSoon: true,
   description:
     "Multi-tenant SaaS that acts as a custom interface layer on top of <strong>Smartsheet</strong>. Each company builds tailored views for its field workers, who work on the data without needing a Smartsheet licence per user — an affordable alternative to Dynamic View.<br/><br/>Built with Laravel 13, Vue 3 and Inertia.js, with team-based multi-tenancy, a role and permission system per area, and a catalogue of view elements (read, write, media, timers and dynamic lists) that are combined to compose each screen.",
   components: [

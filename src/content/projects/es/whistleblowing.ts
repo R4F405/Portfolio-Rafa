@@ -13,6 +13,7 @@ export default {
   theme: "dark",
   tags: ["laravel", "livewire", "alpine", "tailwind", "mysql"],
   videoBorder: false,
+  liveComingSoon: true,
   description:
     "Plataforma de canal de denuncias conforme a la <strong>Ley 2/2023</strong>, construida sobre una idea simple: si el sistema no guarda el dato, nadie puede filtrarlo.<br/><br/>El informante envía la denuncia sin cuenta y recibe un código de seguimiento con el que consulta el estado y habla con el gestor por un chat cifrado. Un middleware sobrescribe su IP y borra el User-Agent antes de que la petición llegue al controlador, los adjuntos pasan por una limpieza de metadatos EXIF y GPS, y el asunto, la descripción y los mensajes se guardan cifrados con AES-256-CBC.<br/><br/>Del lado de la empresa hay jerarquía de roles con permisos por área, 2FA obligatorio, registro de auditoría inmutable de cada acceso y descarga, y exportación de logs a XLSX, CSV y PDF con previsualización. Se completa con honeypot doble contra bots y límite de envíos por hash irreversible de IP.",
   components: [

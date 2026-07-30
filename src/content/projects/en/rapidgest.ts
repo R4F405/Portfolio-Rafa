@@ -10,7 +10,7 @@ import type { ProjectContent } from "../../types";
 export default {
   title: "Rapidgest",
   theme: "light",
-  tags: ["laravel", "livewire", "alpine", "php", "mysql"],
+  tags: ["laravel", "livewire", "alpine", "php", "mysql", "ia"],
   videoBorder: false,
   live: "https://rapidgest.com",
   description:

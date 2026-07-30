@@ -186,6 +186,11 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #68217a;
       color: white;
     }
+
+    &-ia {
+      background-color: #8b5cf6;
+      color: white;
+    }
   }
 }
 </style>
