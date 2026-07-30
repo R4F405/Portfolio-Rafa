@@ -22,7 +22,14 @@ export type TagVariant =
   | "inertia"
   | "tailwind"
   | "openai"
-  | "bootstrap";
+  | "bootstrap"
+  | "python"
+  | "discord"
+  | "flask"
+  | "fastapi"
+  | "playwright"
+  | "sqlite"
+  | "docker";
 
 export const tagLabels = {
   three: "Three.js",
@@ -49,4 +56,11 @@ export const tagLabels = {
   tailwind: "Tailwind",
   openai: "OpenAI API",
   bootstrap: "Bootstrap",
+  python: "Python",
+  discord: "discord.py",
+  flask: "Flask",
+  fastapi: "FastAPI",
+  playwright: "Playwright",
+  sqlite: "SQLite",
+  docker: "Docker",
 } as const satisfies Record<TagVariant, string>;

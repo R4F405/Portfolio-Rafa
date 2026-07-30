@@ -15,6 +15,8 @@ export interface ProjectContent {
   /** Muestra el botón "Ver en vivo" desactivado, con aviso de web en desarrollo al pasar el cursor. */
   liveComingSoon?: boolean;
   source?: string;
+  /** Repositorios extra, cuando el proyecto reúne más de uno. Cada uno con su propia etiqueta. */
+  sources?: { label: string; href: string }[];
   components?: ProjectComponent[];
 }
 

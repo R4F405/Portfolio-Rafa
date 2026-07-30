@@ -64,6 +64,18 @@ watch(projectId, () => {
           t("source-code")
         }}</Button>
       </Link>
+      <Link
+        v-for="extra in content.sources ?? []"
+        :key="extra.href"
+        :href="extra.href"
+        external
+        class="project-hero-button"
+        data-cursor="arrow-external"
+      >
+        <Button renderAs="div" variant="border" class="children-unclickable" data-hoversound="hover">{{
+          extra.label
+        }}</Button>
+      </Link>
     </div>
   </div>
 </template>

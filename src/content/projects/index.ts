@@ -6,6 +6,8 @@ export const projectIds = [
   "smartsheets",
   "whistleblowing",
   "comparador",
+  "multiscraping",
+  "discord-bots",
   "cubewar",
   "quibbo",
   "sharkie",

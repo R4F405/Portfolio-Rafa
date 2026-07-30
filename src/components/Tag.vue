@@ -141,6 +141,41 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
       background-color: #7952b3;
       color: white;
     }
+
+    &-python {
+      background-color: #3776ab;
+      color: white;
+    }
+
+    &-discord {
+      background-color: #5865f2;
+      color: white;
+    }
+
+    &-flask {
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    &-fastapi {
+      background-color: #009688;
+      color: white;
+    }
+
+    &-playwright {
+      background-color: #2ead33;
+      color: #06280a;
+    }
+
+    &-sqlite {
+      background-color: #0f80cc;
+      color: white;
+    }
+
+    &-docker {
+      background-color: #2496ed;
+      color: white;
+    }
   }
 }
 </style>

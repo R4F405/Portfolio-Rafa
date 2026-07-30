@@ -7,6 +7,8 @@ import thumbnailRapidgest from "../../../assets/thumbnails/rapidgest.webp";
 import thumbnailSmartsheets from "../../../assets/thumbnails/smartsheets.webp";
 import thumbnailComparador from "../../../assets/thumbnails/comparador.webp";
 import thumbnailWhistleblowing from "../../../assets/thumbnails/whistleblowing.webp";
+import thumbnailDiscordBots from "../../../assets/thumbnails/discord-bots.webp";
+import thumbnailMultiScraping from "../../../assets/thumbnails/multiscraping.webp";
 
 import type { ProjectPreview } from "../../types";
 
@@ -34,6 +36,18 @@ export default [
     slug: "comparador",
     thumbnail: thumbnailComparador,
     description: "AI tariff extraction",
+  },
+  {
+    title: "MultiScraping",
+    slug: "multiscraping",
+    thumbnail: thumbnailMultiScraping,
+    description: "Multi-platform lead generation",
+  },
+  {
+    title: "Discord bots",
+    slug: "discord-bots",
+    thumbnail: thumbnailDiscordBots,
+    description: "GitHub and Jira webhooks",
   },
   {
     title: "CubeWar",
